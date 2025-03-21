@@ -5,8 +5,9 @@ import { toast } from 'react-toastify'
 const Feedback = () => {
     const [feedbacks, setFeedbacks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [fromDate, setFromDate] = useState("");
-    const [toDate, setToDate] = useState("");
+    const [startdate, setStartdate] = useState("2025-01-01"); // Jan 1, 2025
+    const [enddate, setEnddate] = useState("2025-12-01"); // Dec 1, 2025
+    const [length,setLength] = useState(0)
 
     // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
@@ -15,12 +16,12 @@ const Feedback = () => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const res = await fetch("/api/getfeed");
+            const res = await fetch(`/api/datefetch?sdate=${startdate}&edate=${enddate}`);
             const receiveData = await res.json();
             if (receiveData.data) {
-                // Sort feedbacks by timestamp in descending order (latest first)
-                const sortedData = receiveData.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                const sortedData = receiveData.data
                 setFeedbacks(sortedData);
+                setLength(sortedData.length)
                 toast.success("Feedback loaded successfully!");
 
             } else {
@@ -44,7 +45,7 @@ const Feedback = () => {
     const totalPages = Math.ceil(feedbacks.length / itemsPerPage);
 
     return (
-        <div className="p-6 max-w-[88rem] mx-auto mt-14">
+        <div className="p-6 max-w-[88rem] mx-auto mt-16">
             <h1 className="text-3xl font-bold text-gray-800 text-center mb-6">📢 Feedback List</h1>
 
 
@@ -57,8 +58,8 @@ const Feedback = () => {
                             <label className="text-gray-700 font-medium lg:w-28">From Date 📅</label>
                             <input
                                 type="date"
-                                value={fromDate}
-                                onChange={(e) => setFromDate(e.target.value)}
+                                value={startdate}
+                                onChange={(e) => setStartdate(e.target.value)}
                                 className="border p-2 rounded-md w-60 focus:ring-2 focus:ring-blue-400 outline-none"
                             />
                         </div>
@@ -67,8 +68,8 @@ const Feedback = () => {
                             <label className="text-gray-700 font-medium w-24">To Date 📅</label>
                             <input
                                 type="date"
-                                value={toDate}
-                                onChange={(e) => setToDate(e.target.value)}
+                                value={enddate}
+                                onChange={(e) => setEnddate(e.target.value)}
                                 className="border p-2 rounded-md w-60 focus:ring-2 focus:ring-blue-400 outline-none"
                             />
                         </div>
@@ -81,6 +82,7 @@ const Feedback = () => {
                             {loading ? "Fetching..." : "🔍 Search"}
                         </button>
                     </div>
+                    <div><p>Total: {length}</p></div>
 
                     {/* Right Side: Refresh DB Button */}
                     <button
@@ -107,7 +109,23 @@ const Feedback = () => {
 
             {/* Table UI */}
             {!loading && feedbacks.length === 0 ? (
-                <p className="text-center text-gray-600">No feedback available.</p>
+                    <div className="flex flex-col items-center justify-center  bg-gray-100 rounded-lg shadow-md pb-5 pt-5">
+                    <img
+                        src='/nodata.png'
+                        alt="No feedback"
+                        className=" h-80  animate-none" // Small bounce animation for effect
+                    />
+                    <h2 className="text-xl font-semibold text-gray-700">Oops! No feedback available.</h2>
+                    <p className="text-gray-500 text-center mt-2">
+                        No feedback found for the selected date range. Try choosing a different date.
+                    </p>
+                    <button
+                        onClick={() => { setStartdate("2025-01-01"); setEnddate("2025-12-31"); fetchData(); }}
+                        className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
+                    >
+                        Reset Date & Search Again 🔄
+                    </button>
+                </div>
             ) : (
                 <div className="overflow-x-auto">
                     <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">

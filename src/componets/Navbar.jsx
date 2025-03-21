@@ -11,16 +11,18 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="text-xl font-bold text-gray-900">
-            <img src="https://bookingjini.com/wp-content/uploads/2024/06/download-1.png" alt="Image"  style={{width:"150px"}}/>
+            <a href="bookingjini.com">
+              <img src="https://bookingjini.com/wp-content/uploads/2024/06/download-1.png" alt="Image" style={{ width: "150px" }} />
+            </a>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
+          {/* <div className="hidden md:flex space-x-6">
             <a href="#" className="text-gray-700 hover:text-blue-500">Home</a>
             <a href="#" className="text-gray-700 hover:text-blue-500">About</a>
             <a href="#" className="text-gray-700 hover:text-blue-500">Services</a>
             <a href="#" className="text-gray-700 hover:text-blue-500">Contact</a>
-          </div>
+          </div> */}
 
           {/* Right Side Button */}
           <div className="hidden md:block">

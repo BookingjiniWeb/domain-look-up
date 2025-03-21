@@ -3,31 +3,37 @@ import { NextResponse } from "next/server";
 import Feedback from "@/models/feedModels";
 
 export async function GET(req) {
-    await connect();
-
     try {
+        await connect(); // Ensure DB connection
+
+        // Extract search parameters from the request URL
         const { searchParams } = new URL(req.url);
-        const fromDate = searchParams.get("from");
-        const toDate = searchParams.get("to");
+        const sdate = searchParams.get("sdate"); // Get the "date" query parameter
+        const edate = searchParams.get("edate"); // Get the "date" query parameter
 
-        let query = {};
+        console.log("Received Date:", sdate , edate);
 
-        if (fromDate && toDate) {
-            const start = new Date(fromDate);
-            start.setHours(0, 0, 0, 0);
+        // if (!date) {
+        //     return new Response(JSON.stringify({ error: "Date is required" }), { status: 400 });
+        // }
 
-            const end = new Date(toDate);
-            end.setHours(23, 59, 59, 999);
+        // Convert date string into a Date object
+        const startDate = new Date(sdate);
+        const endDate = new Date(edate);
+        endDate.setHours(23, 59, 59, 999); // Set end of the day
 
-            query.timestamp = { $gte: start, $lte: end };
-        }
+        // Find feedbacks where the timestamp matches the selected date
+        const feedbacks = await Feedback.find({
+            timestamp: {
+                $gte: startDate, // Greater than or equal to start of the day
+                $lte: endDate,   // Less than or equal to end of the day
+            }
+        });
 
-        const feedback = await Feedback.find(query);
+        return new Response(JSON.stringify({ success: true, data: feedbacks }), { status: 200 });
 
-        return NextResponse.json({ success: true, data: feedback }, { status: 200 });
     } catch (error) {
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+        console.error("Error fetching feedbacks:", error);
+        return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
     }
 }
-
-export const dynamic = "force-dynamic"; // Ensures the API always fetches fresh data
