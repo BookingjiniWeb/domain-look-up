@@ -33,6 +33,22 @@ export default function LoginPage() {
   };
 
   return (
+    <>
+                <a
+                href="https://t.me/+MnhJy9KSj9s1MjQ1"
+                target="_blank"
+                className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out"
+            >
+
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M9.033 16.928s-.353.016-.521-.18c-.163-.188-.153-.538-.153-.538l.353-2.365 7.838-7.063c.322-.288-.07-.45-.498-.265L6.29 11.347l-2.252-.7c-.49-.15-.5-.49.1-.727L20.103 3.36c.436-.177.817.105.672.765L17.758 19.77c-.093.475-.377.59-.763.367l-3.826-2.827-1.842 1.783z" />
+                </svg>
+
+                Join our Telegram
+            </a>
+    
+    
+  
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-blue-100 to-pink-100 px-4">
       <div className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-md transition-all duration-300">
         <div className="flex flex-col items-center mb-6">
@@ -75,5 +91,7 @@ export default function LoginPage() {
       </div>
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
+
+    </>
   );
 }
