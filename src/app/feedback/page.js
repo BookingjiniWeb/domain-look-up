@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 // import { toast } from "react-hot-toast";
 import { toast } from 'react-toastify'
+import Image from "next/image";
 const Feedback = () => {
     const [feedbacks, setFeedbacks] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -110,10 +111,12 @@ const Feedback = () => {
             {/* Table UI */}
             {!loading && feedbacks.length === 0 ? (
                     <div className="flex flex-col items-center justify-center  bg-gray-100 rounded-lg shadow-md pb-5 pt-5">
-                    <img
+                    <Image
                         src='/nodata.png'
                         alt="No feedback"
                         className=" h-80  animate-none" // Small bounce animation for effect
+                        width={400}
+                        height={400}
                     />
                     <h2 className="text-xl font-semibold text-gray-700">Oops! No feedback available.</h2>
                     <p className="text-gray-500 text-center mt-2">
