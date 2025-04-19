@@ -96,9 +96,9 @@ const Lookup = () => {
 
 
       {loading ? (
-        <div className="flex justify-center items-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
-        </div>
+  <div className="flex justify-center items-center py-20 bg-white min-h-[700px]">
+  <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
+</div>
       ) : (
         <div className="overflow-auto">
           <table className="w-full border border-gray-200 rounded-xl overflow-hidden shadow-md">
