@@ -96,9 +96,9 @@ const Lookup = () => {
 
 
       {loading ? (
-  <div className="flex justify-center items-center py-20 bg-white min-h-[700px]">
-  <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
-</div>
+        <div className="flex justify-center items-center py-20 bg-white min-h-[450px]">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600"></div>
+        </div>
       ) : (
         <div className="overflow-auto">
           <table className="w-full border border-gray-200 rounded-xl overflow-hidden shadow-md">
@@ -142,14 +142,16 @@ const Lookup = () => {
                     </td>
                     <td className="p-2 border border-gray-300 text-blue-700">
                       <a
-                        href={`https://${item.url}`}
+                        href={item.url.startsWith('http://') || item.url.startsWith('https://') ? item.url : `https://${item.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline transition-colors"
                       >
-                        {item.url}
+                        {item.url.replace(/^https?:\/\//, '')}
                       </a>
                     </td>
+
+
                     <td className="p-2 border border-gray-300">
                       {item.daysRemaining < 0 ? (
                         <span className="text-red-600 font-semibold">❌ Expired</span>
