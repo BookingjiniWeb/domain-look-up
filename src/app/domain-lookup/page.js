@@ -58,7 +58,7 @@ const Lookup = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-10 max-w-8xl mx-auto lg:pt-22">
+    <div className="p-4 sm:p-6 md:p-10 max-w-8xl mx-auto lg:pt-22  bg-gradient-to-tr from-indigo-100 via-white to-teal-100  " >
       <Toaster />
       <h1 className="text-4xl font-extrabold mb-6 text-indigo-600 text-center">🔍 Domain & SSL Lookup</h1>
 
@@ -68,7 +68,7 @@ const Lookup = () => {
           placeholder="🔎 Filter by Account Manager Name"
           value={amName}
           onChange={(e) => setAmName(e.target.value)}
-          className="p-3 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 w-full"
+          className="p-3 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 w-full text-black"
         />
 
         <input
@@ -76,7 +76,7 @@ const Lookup = () => {
           placeholder="🏨 Filter by Property Name"
           value={propertyName}
           onChange={(e) => setPropertyName(e.target.value)}
-          className="p-3 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 w-full"
+          className="p-3 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 w-full text-black"
         />
 
         <button
@@ -101,40 +101,61 @@ const Lookup = () => {
         </div>
       ) : (
         <div className="overflow-auto">
-          <table className="w-full border rounded-lg overflow-hidden shadow-md">
-            <thead className="bg-indigo-100 text-indigo-800">
+          <table className="w-full border border-gray-200 rounded-xl overflow-hidden shadow-md">
+            <thead className="bg-indigo-700 text-white text-sm uppercase tracking-wide">
               <tr>
-                <th className="p-3 border">#</th>
-                <th className="p-3 border text-left">Property</th>
-                <th className="p-3 border text-left">Account Manager</th>
-                <th className="p-3 border text-left">Domain</th>
-                <th className="p-3 border text-left">SSL Info</th>
-                <th className="p-3 border">Domain Info</th>
+                <th className="p-4 border border-indigo-600 text-center">
+                  🧾 <span className="ml-1">Sl No.</span>
+                </th>
+                <th className="p-4 border border-indigo-600 text-left">
+                  🏨 <span className="ml-1">Property</span>
+                </th>
+                <th className="p-4 border border-indigo-600 text-left">
+                  👤 <span className="ml-1">Account Manager</span>
+                </th>
+                <th className="p-4 border border-indigo-600 text-left">
+                  🌐 <span className="ml-1">Domain</span>
+                </th>
+                <th className="p-4 border border-indigo-600 text-left">
+                  🔒 <span className="ml-1">SSL Info</span>
+                </th>
+                <th className="p-4 border border-indigo-600 text-center">
+                  📑 <span className="ml-1">Domain Info</span>
+                </th>
               </tr>
             </thead>
             <tbody>
               {filteredData.length > 0 ? (
                 filteredData.map((item, idx) => (
-                  <tr key={idx} className="hover:bg-indigo-50">
-                    <td className="p-3 border text-center">{idx + 1}</td>
-                    <td className="p-3 border">{item.propertyName}</td>
-                    <td className="p-3 border">{item.accountManager}</td>
-                    <td className="p-3 border text-blue-700">
+                  <tr
+                    key={idx}
+                    className="even:bg-indigo-100 odd:bg-white hover:bg-indigo-50 hover:scale-[1.01] transition-all duration-200"
+                  >
+                    <td className="p-1 border border-gray-300 text-center font-medium text-gray-700">
+                      {idx + 1}
+                    </td>
+                    <td className="p-2 border border-gray-300 text-gray-800 font-medium">
+                      {item.propertyName}
+                    </td>
+                    <td className="p-2 border border-gray-300 text-gray-700">
+                      {item.accountManager}
+                    </td>
+                    <td className="p-2 border border-gray-300 text-blue-700">
                       <a
                         href={`https://${item.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline-none no-underline"
+                        className="hover:underline transition-colors"
                       >
                         {item.url}
                       </a>
                     </td>
-                    <td className="p-3 border">
+                    <td className="p-2 border border-gray-300">
                       {item.daysRemaining < 0 ? (
                         <span className="text-red-600 font-semibold">❌ Expired</span>
                       ) : (
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-                          <span>📅 {formatDate(item.sslExpiry)}</span>
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3">
+                          <span className="text-gray-800">📅 {formatDate(item.sslExpiry)}</span>
                           <span
                             className={`text-sm ${item.daysRemaining <= 5
                               ? 'text-red-600 font-semibold'
@@ -146,29 +167,28 @@ const Lookup = () => {
                         </div>
                       )}
                     </td>
-                    <td className="p-3 border text-center">
+                    <td className="p-2 border border-gray-300 text-center">
                       <a
                         href={`https://www.whois.com/whois/${item.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium px-4 py-2 rounded-lg transition duration-200 shadow-sm"
+                        className="inline-flex items-center justify-center gap-2 bg-indigo-100 hover:bg-indigo-200 text-indigo-800 font-medium px-4 py-2 rounded-md transition-all duration-200 shadow-sm"
                       >
                         🌐 Whois
                       </a>
                     </td>
-
-
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="6" className="text-center p-6 text-gray-600">
+                  <td colSpan="6" className="text-center p-6 text-gray-500 font-medium">
                     No matching data found.
                   </td>
                 </tr>
               )}
             </tbody>
           </table>
+
         </div>
       )}
     </div>
