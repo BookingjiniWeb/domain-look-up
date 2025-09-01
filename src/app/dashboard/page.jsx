@@ -25,25 +25,52 @@ export default function Dashboard() {
   if (loading) return <p>Loading...</p>;
   if (goals.length === 0) return <p>No goals submitted yet.</p>;
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Team Goals Dashboard</h1>
-      <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px" }}>
+return (
+  <div
+    style={{
+      minHeight: "100vh",
+      padding: "80px 20px",
+      fontFamily: "'Poppins', sans-serif",
+      backgroundColor: "#f0f4f8",
+      color: "#333",
+    }}
+  >
+
+
+    <div
+      style={{
+        overflowX: "auto",
+        borderRadius: "12px",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+        backgroundColor: "#fff",
+      }}
+    >
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
-          <tr style={{ borderBottom: "2px solid #ccc" }}>
-            <th style={{ textAlign: "left", padding: "10px" }}>Name</th>
-            <th style={{ textAlign: "left", padding: "10px" }}>Email</th>
-            <th style={{ textAlign: "left", padding: "10px" }}>Goal</th>
-            <th style={{ textAlign: "left", padding: "10px" }}>Submitted At</th>
+          <tr style={{ backgroundColor: "#2490EB", color: "#fff" }}>
+            <th style={{ textAlign: "left", padding: "15px" }}>Name</th>
+            <th style={{ textAlign: "left", padding: "15px" }}>Email</th>
+            <th style={{ textAlign: "left", padding: "15px" }}>Goal</th>
+            <th style={{ textAlign: "left", padding: "15px" }}>Submitted At</th>
           </tr>
         </thead>
         <tbody>
-          {goals.map((g) => (
-            <tr key={g._id} style={{ borderBottom: "1px solid #eee" }}>
-              <td style={{ padding: "10px" }}>{g.name}</td>
-              <td style={{ padding: "10px" }}>{g._id}</td>
-              <td style={{ padding: "10px" }}>{g.goal}</td>
-              <td style={{ padding: "10px" }}>
+          {goals.map((g, idx) => (
+            <tr
+              key={g._id}
+              style={{
+                backgroundColor: idx % 2 === 0 ? "#f9f9f9" : "#fff",
+                transition: "0.3s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e0f0ff")}
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = idx % 2 === 0 ? "#f9f9f9" : "#fff")
+              }
+            >
+              <td style={{ padding: "12px 15px", fontWeight: 500 }}>{g.name}</td>
+              <td style={{ padding: "12px 15px" }}>{g._id}</td>
+              <td style={{ padding: "12px 15px" }}>{g.goal}</td>
+              <td style={{ padding: "12px 15px" }}>
                 {new Date(g.createdAt).toLocaleString()}
               </td>
             </tr>
@@ -51,5 +78,6 @@ export default function Dashboard() {
         </tbody>
       </table>
     </div>
-  );
+  </div>
+);
 }
