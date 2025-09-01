@@ -5,7 +5,7 @@ import { sendBulkGoalMails } from "@/lib/mailer";
 // Example: 20 users
 const users = [
     { name: "Shitansu Kumar Gochhayat", email: "shitansu.gochhayat@bookingjini.co" },
-    { name: "Perbindar Lakra", email: "parbinder.lakra@bookingjini.co" },
+    // { name: "Perbindar Lakra", email: "parbinder.lakra@bookingjini.co" },
 ];
 
 export async function GET() {
