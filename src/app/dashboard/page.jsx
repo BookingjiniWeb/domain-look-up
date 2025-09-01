@@ -33,10 +33,48 @@ return (
       fontFamily: "'Poppins', sans-serif",
       backgroundColor: "#f0f4f8",
       color: "#333",
+      position: "relative",
     }}
   >
+    {/* Sticky Left Button */}
+    <div
+      style={{
+        position: "fixed",
+        top: "90%",
+        left: "20px",
+        transform: "translateY(-50%)",
+        zIndex: 1000,
+      }}
+    >
+      <button
+        style={{
+          padding: "12px 20px",
+          backgroundColor: "#2490EB",
+          color: "#fff",
+          fontWeight: 600,
+          borderRadius: "8px",
+          boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+          cursor: "pointer",
+          transition: "all 0.3s",
+          whiteSpace: "nowrap",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "#1c6fd1";
+          e.currentTarget.style.transform = "translateY(-2px)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "#2490EB";
+          e.currentTarget.style.transform = "translateY(0)";
+        }}
+        onClick={() => {
+          window.location.href = "/domain-lookup";
+        }}
+      >
+        Manage my domain
+      </button>
+    </div>
 
-
+    {/* Table Container */}
     <div
       style={{
         overflowX: "auto",
@@ -62,9 +100,12 @@ return (
                 backgroundColor: idx % 2 === 0 ? "#f9f9f9" : "#fff",
                 transition: "0.3s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e0f0ff")}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "#e0f0ff")
+              }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = idx % 2 === 0 ? "#f9f9f9" : "#fff")
+                (e.currentTarget.style.backgroundColor =
+                  idx % 2 === 0 ? "#f9f9f9" : "#fff")
               }
             >
               <td style={{ padding: "12px 15px", fontWeight: 500 }}>{g.name}</td>
@@ -80,4 +121,5 @@ return (
     </div>
   </div>
 );
+
 }

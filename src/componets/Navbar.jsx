@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Menu, X ,ShieldCheck} from "lucide-react";
+import { Menu, X, ShieldCheck } from "lucide-react";
+import { HomeIcon, BarChart2, User } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,15 +21,26 @@ export default function Navbar() {
           </div>
 
           {/* Right Side Button */}
-<div className="hidden md:block">
-  <a
-    href="/login"
-    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-  >
-    <ShieldCheck className="w-5 h-5 text-white drop-shadow-sm" />
-    <span className="font-semibold tracking-wide">Use as Admin</span>
-  </a>
-</div>
+          <div className="hidden md:block">
+            <a
+              href="/dashboard"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-black hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <HomeIcon className="w-5 h-5 text-white drop-shadow-sm" />
+              <span className="font-semibold tracking-wide">View Dashboard</span>
+            </a>
+          </div>
+
+
+          <div className="hidden md:block">
+            <a
+              href="/login"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <ShieldCheck className="w-5 h-5 text-white drop-shadow-sm" />
+              <span className="font-semibold tracking-wide">Use as Admin</span>
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
