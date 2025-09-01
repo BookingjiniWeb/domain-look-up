@@ -18,11 +18,13 @@
     "lucide-react": "^0.483.0",
     "mongoose": "^8.12.1",
     "next": "15.2.3",
+    "nodemailer": "^7.0.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "react-toastify": "^11.0.5",
     "ssl-checker": "^2.0.10",
+    "uuid": "^11.1.0",
     "whois-json": "^2.0.4"
   },
   "devDependencies": {
@@ -31,5 +33,17 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "tailwindcss": "^4"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BookingjiniWeb/domain-look-up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BookingjiniWeb/domain-look-up/issues"
+  },
+  "homepage": "https://github.com/BookingjiniWeb/domain-look-up#readme"
 }
