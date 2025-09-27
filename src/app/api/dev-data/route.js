@@ -15,6 +15,8 @@ export async function POST(req) {
             email,
             phone,
             linkedin,
+            portfolio,
+            additionalInfo,
             exp,
             doj,
             ctc,
@@ -45,6 +47,8 @@ export async function POST(req) {
             doj,
             ctc,
             expected,
+            portfolio,
+            additionalInfo,
             skills: skillValues,
         });
 

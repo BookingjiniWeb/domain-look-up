@@ -7,6 +7,7 @@ const ApplicationSchema = new mongoose.Schema(
         email: { type: String, required: true },
         phone: { type: String, required: true },
         linkedin: { type: String },
+        portfolio: { type: String },
         exp: { type: String },
         doj: { type: String },
         ctc: { type: String },
