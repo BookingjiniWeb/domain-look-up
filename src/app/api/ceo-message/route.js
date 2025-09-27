@@ -34,7 +34,9 @@ export async function POST(req) {
 }
 
 // GET: Fetch all CEO messages
-export async function GET(req) {
+
+
+export async function GET() {
     try {
         await connect(); // connect to MongoDB
 
