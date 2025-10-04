@@ -83,7 +83,7 @@ export default function SubmissionList() {
                                                 href={`mailto:${d.email}`}
                                                 className="text-blue-600 hover:underline flex items-center gap-1"
                                             >
-                                                <Mail className="w-4 h-4" />
+                                               {d.email}
                                             </a>
                                         )}
                                     </td>
