@@ -29,7 +29,7 @@
             "performance_optimization",
             "responsive_design"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-10-03T03:09:30.258Z",
         "updatedAt": "2025-10-03T03:09:30.258Z",
         "__v": 0
@@ -79,7 +79,7 @@
             "bootstrap",
             "mysql"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-10-02T14:52:39.761Z",
         "updatedAt": "2025-10-02T14:52:39.761Z",
         "__v": 0
@@ -181,7 +181,7 @@
             "security",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-30T12:07:59.986Z",
         "updatedAt": "2025-09-30T12:07:59.986Z",
         "__v": 0
@@ -237,7 +237,7 @@
             "command_line",
             "security"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-30T05:10:20.157Z",
         "updatedAt": "2025-09-30T05:10:20.157Z",
         "__v": 0
@@ -275,7 +275,7 @@
             "css3",
             "javascript"
         ],
-        "status": "approved by developer",
+        "status": "rejected by developer",
         "createdAt": "2025-09-29T16:53:11.482Z",
         "updatedAt": "2025-09-29T16:53:11.482Z",
         "__v": 0
@@ -377,7 +377,7 @@
             "json",
             "mysql"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-29T07:40:09.126Z",
         "updatedAt": "2025-09-29T07:40:09.126Z",
         "__v": 0
@@ -410,7 +410,8 @@
             "command_line",
             "performance_optimization"
         ],
-        "status": "approved by wordpress",
+           
+         "status": "rejected by ctc",
         "createdAt": "2025-09-29T06:38:02.181Z",
         "updatedAt": "2025-09-29T06:38:02.181Z",
         "__v": 0
@@ -447,7 +448,7 @@
             "seo_basics",
             "domain_management"
         ],
-        "status": "approved by wordpress",
+      "status": "rejected by ctc",
         "createdAt": "2025-09-29T05:35:31.626Z",
         "updatedAt": "2025-09-29T05:35:31.626Z",
         "__v": 0
@@ -509,7 +510,7 @@
             "ui_ux",
             "domain_management"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-29T03:50:52.311Z",
         "updatedAt": "2025-09-29T03:50:52.311Z",
         "__v": 0
@@ -541,7 +542,7 @@
             "cross_browser",
             "security"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-29T03:17:08.870Z",
         "updatedAt": "2025-09-29T03:17:08.870Z",
         "__v": 0
@@ -579,7 +580,7 @@
             "web_hosting",
             "debugging"
         ],
-        "status": "approved by wordpress",
+       "status": "rejected by ctc",
         "createdAt": "2025-09-28T18:06:51.913Z",
         "updatedAt": "2025-09-28T18:06:51.913Z",
         "__v": 0
@@ -611,7 +612,7 @@
             "php",
             "jquery"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T17:51:50.963Z",
         "updatedAt": "2025-09-28T17:51:50.963Z",
         "__v": 0
@@ -692,7 +693,7 @@
             "debugging",
             "responsive_design"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T13:11:13.551Z",
         "updatedAt": "2025-09-28T13:11:13.551Z",
         "__v": 0
@@ -724,7 +725,7 @@
             "cross_browser",
             "security"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T12:55:36.390Z",
         "updatedAt": "2025-09-28T12:55:36.390Z",
         "__v": 0
@@ -863,7 +864,7 @@
             "json",
             "debugging"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T08:18:15.367Z",
         "updatedAt": "2025-09-28T08:18:15.367Z",
         "__v": 0
@@ -953,7 +954,7 @@
             "json",
             "git"
         ],
-        "status": "approved by wordpress",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T06:18:36.921Z",
         "updatedAt": "2025-09-28T06:18:36.921Z",
         "__v": 0
@@ -1001,7 +1002,7 @@
             "wordpress",
             "cross_browser"
         ],
-        "status": "approved by wordpress",
+         "status": "rejected by ctc",
         "createdAt": "2025-09-28T05:45:38.141Z",
         "updatedAt": "2025-09-28T05:45:38.141Z",
         "__v": 0
@@ -1030,7 +1031,7 @@
             "json",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T05:19:41.160Z",
         "updatedAt": "2025-09-28T05:19:41.160Z",
         "__v": 0
@@ -1083,7 +1084,7 @@
             "debugging",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T04:05:22.498Z",
         "updatedAt": "2025-09-28T04:05:22.498Z",
         "__v": 0
@@ -1174,7 +1175,7 @@
             "command_line",
             "cross_browser"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-28T00:59:18.680Z",
         "updatedAt": "2025-09-28T00:59:18.680Z",
         "__v": 0
@@ -1231,7 +1232,7 @@
             "wordpress",
             "responsive_design"
         ],
-        "status": "approved by wordpress",
+        "status": "approved by developer",
         "createdAt": "2025-09-27T20:02:27.467Z",
         "updatedAt": "2025-09-27T20:02:27.467Z",
         "__v": 0
@@ -1256,7 +1257,7 @@
             "git",
             "mysql"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T19:12:34.778Z",
         "updatedAt": "2025-09-27T19:12:34.778Z",
         "__v": 0
@@ -1340,7 +1341,7 @@
             "mysql",
             "responsive_design"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T18:21:12.624Z",
         "updatedAt": "2025-09-27T18:21:12.624Z",
         "__v": 0
@@ -1497,7 +1498,7 @@
             "json",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T17:13:18.647Z",
         "updatedAt": "2025-09-27T17:13:18.647Z",
         "__v": 0
@@ -1606,7 +1607,7 @@
             "json",
             "debugging"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:53:51.131Z",
         "updatedAt": "2025-09-27T16:53:51.131Z",
         "__v": 0
@@ -1632,7 +1633,7 @@
             "mysql",
             "json"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:53:45.256Z",
         "updatedAt": "2025-09-27T16:53:45.256Z",
         "__v": 0
@@ -1658,7 +1659,7 @@
             "mysql",
             "json"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:52:25.387Z",
         "updatedAt": "2025-09-27T16:52:25.387Z",
         "__v": 0
@@ -1686,7 +1687,7 @@
             "debugging",
             "responsive_design"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:52:22.311Z",
         "updatedAt": "2025-09-27T16:52:22.311Z",
         "__v": 0
@@ -1748,7 +1749,7 @@
             "command_line",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:44:22.964Z",
         "updatedAt": "2025-09-27T16:44:22.964Z",
         "__v": 0
@@ -1786,7 +1787,7 @@
             "security",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:29:06.902Z",
         "updatedAt": "2025-09-27T16:29:06.902Z",
         "__v": 0
@@ -1819,7 +1820,7 @@
             "debugging",
             "seo_basics"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T16:00:25.155Z",
         "updatedAt": "2025-09-27T16:00:25.155Z",
         "__v": 0
@@ -1866,7 +1867,7 @@
             "mysql",
             "bootstrap"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:36:52.488Z",
         "updatedAt": "2025-09-27T15:36:52.488Z",
         "__v": 0
@@ -1924,7 +1925,7 @@
             "security",
             "command_line"
         ],
-        "status": "approved by wordpress",
+         "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:30:57.665Z",
         "updatedAt": "2025-09-27T15:30:57.665Z",
         "__v": 0
@@ -2002,7 +2003,7 @@
             "responsive_design",
             "bootstrap"
         ],
-        "status": "approved by wordpress",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:26:13.897Z",
         "updatedAt": "2025-09-27T15:26:13.897Z",
         "__v": 0
@@ -2129,7 +2130,7 @@
             "command_line",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+        "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:20:02.814Z",
         "updatedAt": "2025-09-27T15:20:02.814Z",
         "__v": 0
@@ -2212,7 +2213,7 @@
             "debugging",
             "cross_browser"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:09:31.102Z",
         "updatedAt": "2025-09-27T15:09:31.102Z",
         "__v": 0
@@ -2243,7 +2244,7 @@
             "debugging",
             "cross_browser"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T15:06:10.279Z",
         "updatedAt": "2025-09-27T15:06:10.279Z",
         "__v": 0
@@ -2345,7 +2346,7 @@
             "command_line",
             "json"
         ],
-        "status": "approved by developer",
+        "status": "rejected by developer",
         "createdAt": "2025-09-27T14:51:27.792Z",
         "updatedAt": "2025-09-27T14:51:27.792Z",
         "__v": 0
@@ -2428,7 +2429,7 @@
             "json",
             "tailwind"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T14:47:02.590Z",
         "updatedAt": "2025-09-27T14:47:02.590Z",
         "__v": 0
@@ -2451,7 +2452,7 @@
             "javascript",
             "mysql"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T14:40:53.813Z",
         "updatedAt": "2025-09-27T14:40:53.813Z",
         "__v": 0
@@ -2560,7 +2561,7 @@
             "css3",
             "web_hosting"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T14:06:42.464Z",
         "updatedAt": "2025-09-27T14:06:42.464Z",
         "__v": 0
@@ -2609,7 +2610,7 @@
             "json",
             "debugging"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T13:55:15.824Z",
         "updatedAt": "2025-09-27T13:55:15.824Z",
         "__v": 0
@@ -2687,7 +2688,7 @@
             "ui_ux",
             "json"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T13:31:36.755Z",
         "updatedAt": "2025-09-27T13:31:36.755Z",
         "__v": 0
@@ -2710,7 +2711,7 @@
             "mysql",
             "php"
         ],
-        "status": "approved by developer",
+        "status": "rejected by developer",
         "createdAt": "2025-09-27T13:23:14.743Z",
         "updatedAt": "2025-09-27T13:23:14.743Z",
         "__v": 0
@@ -2740,7 +2741,7 @@
             "web_hosting",
             "git"
         ],
-        "status": "approved by developer",
+          "status": "rejected by ctc",
         "createdAt": "2025-09-27T13:13:32.070Z",
         "updatedAt": "2025-09-27T13:13:32.070Z",
         "__v": 0
@@ -2852,7 +2853,7 @@
             "web_hosting",
             "responsive_design"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:34:26.328Z",
         "updatedAt": "2025-09-27T12:34:26.328Z",
         "__v": 0
@@ -2889,7 +2890,7 @@
             "security",
             "performance_optimization"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:28:12.105Z",
         "updatedAt": "2025-09-27T12:28:12.105Z",
         "__v": 0
@@ -2917,7 +2918,7 @@
             "git",
             "responsive_design"
         ],
-        "status": "approved by wordpress",
+         "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:25:00.549Z",
         "updatedAt": "2025-09-27T12:25:00.549Z",
         "__v": 0
@@ -2946,7 +2947,7 @@
             "performance_optimization",
             "bootstrap"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:20:09.982Z",
         "updatedAt": "2025-09-27T12:20:09.982Z",
         "__v": 0
@@ -2980,7 +2981,7 @@
             "performance_optimization",
             "security"
         ],
-        "status": "approved by wordpress",
+         "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:17:16.720Z",
         "updatedAt": "2025-09-27T12:17:16.720Z",
         "__v": 0
@@ -3051,7 +3052,7 @@
             "security",
             "javascript"
         ],
-        "status": "approved by wordpress",
+       "status": "rejected by ctc",
         "createdAt": "2025-09-27T12:02:55.956Z",
         "updatedAt": "2025-09-27T12:02:55.956Z",
         "__v": 0
@@ -3083,7 +3084,7 @@
             "security",
             "command_line"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T11:50:49.221Z",
         "updatedAt": "2025-09-27T11:50:49.221Z",
         "__v": 0
@@ -3178,7 +3179,7 @@
             "mysql",
             "json"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T11:34:33.057Z",
         "updatedAt": "2025-09-27T11:34:33.057Z",
         "__v": 0
@@ -3235,7 +3236,7 @@
             "responsive_design",
             "bootstrap"
         ],
-        "status": "approved by developer",
+           "status": "rejected by ctc",
         "createdAt": "2025-09-27T11:18:56.483Z",
         "updatedAt": "2025-09-27T11:18:56.483Z",
         "__v": 0
@@ -3291,7 +3292,7 @@
             "mysql",
             "tailwind"
         ],
-        "status": "approved by developer",
+            "status": "rejected by ctc",
         "createdAt": "2025-09-27T11:14:37.024Z",
         "updatedAt": "2025-09-27T11:14:37.024Z",
         "__v": 0
@@ -3316,40 +3317,9 @@
             "shopify",
             "javascript"
         ],
-        "status": "approved by wordpress",
+         "status": "rejected by ctc",
         "createdAt": "2025-09-27T11:13:36.065Z",
         "updatedAt": "2025-09-27T11:13:36.065Z",
-        "__v": 0
-    },
-    {
-        "_id": "68d7c6be8d31061c588857ec",
-        "name": "Subrat kumar sahoo ",
-        "email": "subrat1454@gmail.com",
-        "phone": "9861203186",
-        "linkedin": "",
-        "portfolio": "",
-        "exp": "no",
-        "doj": "immediate",
-        "ctc": "",
-        "expected": "",
-        "skills": [
-            "html5",
-            "css3",
-            "javascript",
-            "bootstrap",
-            "web_hosting",
-            "responsive_design",
-            "seo_basics",
-            "git",
-            "ui_ux",
-            "mysql",
-            "debugging",
-            "json",
-            "php"
-        ],
-        "status": "approved by developer",
-        "createdAt": "2025-09-27T11:13:02.725Z",
-        "updatedAt": "2025-09-27T11:13:02.725Z",
         "__v": 0
     }
 ]
