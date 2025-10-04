@@ -1,18 +1,19 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Linkedin, Mail, Phone, MessageCircle, Web } from "lucide-react"
+import { Linkedin, Mail, MessageCircle } from "lucide-react"
 
 export default function SubmissionList() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [selectedSkills, setSelectedSkills] = useState([])
     const [showModal, setShowModal] = useState(false)
+    const [statusFilter, setStatusFilter] = useState("")
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("/api/dev-data")
+                const res = await fetch("/api/test-api")
                 if (!res.ok) throw new Error("Failed to fetch")
                 const json = await res.json()
                 setData(json)
@@ -38,11 +39,36 @@ export default function SubmissionList() {
         )
     }
 
+    // Filtered data by status
+    const filteredData = data.filter(d =>
+        statusFilter ? d.status === statusFilter : true
+    )
+
     return (
         <div className="p-4 md:p-8">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
                 Candidate Submissions
             </h1>
+
+            {/* Status Filter */}
+            <div className="flex flex-col md:flex-row justify-between mb-4 items-center">
+                <select
+                    value={statusFilter}
+                    onChange={(e) => setStatusFilter(e.target.value)}
+                    className="px-3 py-2 border rounded-md text-sm mb-2 md:mb-0"
+                >
+                    <option value="">All Status</option>
+                    <option value="rejected by developer">Rejected for skills</option>
+                    <option value="approved by developer">Approved for skills</option>
+                    <option value="approved by wordpress">Wordpress Skills</option>
+                    {/* <option value="pending">Pending</option> */}
+                </select>
+
+                <p className="text-gray-600 text-sm">
+                    Total submissions: {data.length} {statusFilter && `(Filtered: ${filteredData.length})`}
+                </p>
+            </div>
+
 
             <div className="overflow-x-auto shadow-lg rounded-xl border border-gray-200">
                 <table className="w-full text-xs md:text-sm text-left text-gray-600">
@@ -62,30 +88,22 @@ export default function SubmissionList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {Array.isArray(data) && data.length > 0 ? (
-                            data.map((d, i) => (
+                        {filteredData.length > 0 ? (
+                            filteredData.map((d, i) => (
                                 <tr
                                     key={i}
-                                    className="border-b hover:bg-gray-50 transition duration-200 text-xs md:text-sm"
+                                    className={`border-b hover:bg-gray-50 transition duration-200 text-xs md:text-sm ${d.status === "rejected by developer"
+                                        ? "bg-red-300 text-red-800"
+                                        : ""
+                                        }`}
                                 >
                                     <td className="px-3 py-2 md:px-6 md:py-4 font-medium text-gray-800">{d.name}</td>
-
-                                    <td className="px-3 py-2 md:px-6 md:py-4 ">
-
-                                        <a
-                                            href={`mailto:${d.email}`}
-                                            className="text-blue-600 hover:underline"
-                                        >
-                                             <Mail className="w-4 h-4 mr-1" /> {/* Icon with size and spacing */}
-                                            {/* {d.email} */}
-                                        </a>                                   
-                                         </td>
-
-                                    <td className="px-3 py-2 md:px-6 md:py-4 ">
-
-                                        <span>{d.phone}</span>
+                                    <td className="px-3 py-2 md:px-6 md:py-4">
+                                        <a href={`mailto:${d.email}`} className="text-blue-600 hover:underline">
+                                            <Mail className="w-4 h-4 mr-1" />
+                                        </a>
                                     </td>
-
+                                    <td className="px-3 py-2 md:px-6 md:py-4">{d.phone}</td>
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         {d.linkedin && (
                                             <a
@@ -110,7 +128,6 @@ export default function SubmissionList() {
                                             </a>
                                         )}
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         {d.phone && (
                                             <a
@@ -123,7 +140,6 @@ export default function SubmissionList() {
                                             </a>
                                         )}
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         <button
                                             onClick={() => openSkills(d.skills)}
@@ -132,19 +148,15 @@ export default function SubmissionList() {
                                             View
                                         </button>
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         <span className="px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded-full">{d.exp}</span>
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">{d.ctc}</span>
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         <span className="px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">{d.expected}</span>
                                     </td>
-
                                     <td className="px-3 py-2 md:px-6 md:py-4">
                                         <span className="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">{d.doj}</span>
                                     </td>
@@ -152,7 +164,7 @@ export default function SubmissionList() {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="10" className="px-3 py-4 text-center text-gray-500 italic">
+                                <td colSpan="11" className="px-3 py-4 text-center text-gray-500 italic">
                                     No submissions available
                                 </td>
                             </tr>
