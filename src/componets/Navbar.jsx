@@ -12,16 +12,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="text-xl font-bold text-gray-900">
-            <a href="https://bookingjini.com">
+            <a href="https://whois.jinisites.in/panel">
               <img src="https://bookingjini.com/wp-content/uploads/2024/06/download-1.png" alt="Image" style={{ width: "150px" }} />
             </a>
           </div>
-          <div className="text-xl font-bold text-gray-900">
+          {/* <div className="text-xl font-bold text-gray-900">
             <h1 className="text-xl font-extrabold  text-indigo-600 text-center">🔍 Domain & SSL Lookup </h1>
-          </div>
+          </div> */}
 
           {/* Right Side Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <a
               href="/dashboard"
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-black hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -29,7 +29,7 @@ export default function Navbar() {
               <HomeIcon className="w-5 h-5 text-white drop-shadow-sm" />
               <span className="font-semibold tracking-wide">View Dashboard</span>
             </a>
-          </div>
+          </div> */}
 
 
           <div className="hidden md:block">
