@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Copy, Globe, ChevronLeft, ChevronRight, Eye, LoaderIcon } from "lucide-react";
+import { Copy, Globe, ChevronLeft, ChevronRight, Eye, LoaderIcon,Info  } from "lucide-react";
 import { toast } from "react-toastify";
 
 export default function CompanyList() {
@@ -12,22 +12,28 @@ export default function CompanyList() {
   const [showPopup, setShowPopup] = useState(false);
   const [previewCompanyId, setPreviewCompanyId] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(true); // 👈 popup visible initially
+
 
 
 
   const itemsPerPage = 10;
 
   useEffect(() => {
+    const seen = sessionStorage.getItem("seenPopup");
+    if (!seen) {
+      setShowWelcomePopup(true);
+      sessionStorage.setItem("seenPopup", "true");
+    }
+  }, []);
 
+
+
+  useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch(process.env.NEXT_PUBLIC_INTRANET_URL_API, {
-          headers: {
-            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN_INTRANET}`,
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch("/api/get-intranet"); // 👈 Fetch from your backend API
         const json = await res.json();
         const companyArray = json.companyDetails || json.data?.companyDetails || [];
         setCompanies(companyArray);
@@ -38,6 +44,7 @@ export default function CompanyList() {
         setLoading(false);
       }
     };
+
     fetchData();
   }, []);
 
@@ -111,6 +118,7 @@ export default function CompanyList() {
                   <th className="px-4 py-3 text-left font-semibold uppercase tracking-wider">SL</th>
                   <th className="px-4 py-3 text-left font-semibold uppercase tracking-wider">Property</th>
                   <th className="px-4 py-3 text-left font-semibold uppercase tracking-wider">Website</th>
+                  <th className="px-4 py-3 text-left font-semibold uppercase tracking-wider">Company ID</th>
                   <th className="px-4 py-3 text-left font-semibold uppercase tracking-wider">Preview & Copy</th>
                 </tr>
               </thead>
@@ -149,6 +157,20 @@ export default function CompanyList() {
                           <span className="text-gray-400">N/A</span>
                         )}
                       </td>
+                      <td className="px-4 py-2 ">
+                        {c.company_id}
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(c.company_id);
+                            toast.success("Company ID copied!");
+                          }}
+                          className="ml-2 px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded-lg transition"
+                          title="Copy Company ID"
+                        >
+                           <Copy size={14} />
+                        </button>
+                      </td>
+
                       <td className="px-4 py-2 text-center flex gap-2 justify-center">
                         <Button
                           size="sm"
@@ -235,6 +257,78 @@ export default function CompanyList() {
             </div>
           </div>
         )}
+
+        {showWelcomePopup && (
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-md flex items-center justify-center z-50 animate-fadeIn"
+            onClick={() => setShowWelcomePopup(false)}
+          >
+            <div
+              className="relative bg-gradient-to-b from-indigo-50 via-white to-blue-50 rounded-2xl shadow-2xl border border-indigo-100 w-11/12 md:w-2/3 lg:w-1/2 p-8 transition-all duration-500 hover:scale-[1.01]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Glow Accent */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#b6985a]/30 via-indigo-200/10 to-transparent blur-xl -z-10" />
+
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="bg-indigo-100 p-2 rounded-full shadow-sm">
+                           <Info className="h-6 w-6 text-indigo-600" />
+
+                </div>
+                <h2 className="text-2xl font-semibold text-indigo-900 tracking-wide">
+                  Important Information
+                </h2>
+              </div>
+
+              {/* Message */}
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                If your property is <span className="font-semibold text-indigo-600">not listed</span> here, don’t worry!
+                <br />
+                You can still use the chatbot integration by simply replacing the{" "}
+                <span className="bg-indigo-50 px-2 py-0.5 rounded text-[#b6985a] font-medium border border-indigo-100">
+                  company_id
+                </span>{" "}
+                in the script below with your correct one — everything else remains the same.
+              </p>
+
+              {/* Code Example with Copy Button */}
+              <div className="relative bg-indigo-50 border border-indigo-100 rounded-lg p-4 mt-6 font-mono text-sm text-gray-800 shadow-inner">
+                &lt;script async src="https://jiniassist.bookingjini.com/embed.js?company_id=
+                <span className="text-indigo-600 font-semibold">YOUR_COMPANY_ID</span>"&gt;&lt;/script&gt;
+
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      `<script async src="https://jiniassist.bookingjini.com/embed.js?company_id=YOUR_COMPANY_ID"></script>`
+                    );
+                    toast.success("Script copied to clipboard!");
+                  }}
+                  className="absolute top-2 right-2 p-2 rounded-md bg-white/80 hover:bg-white text-indigo-600 hover:text-indigo-800 transition"
+                  title="Copy script"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16h8M8 12h8m-5-8h2a2 2 0 012 2v12a2 2 0 01-2 2h-6a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Footer Button */}
+              <div className="flex justify-end mt-8">
+                <button
+                  onClick={() => setShowWelcomePopup(false)}
+                  className="bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 text-white font-medium px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  Got it
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+
+
+
 
       </div>
 
