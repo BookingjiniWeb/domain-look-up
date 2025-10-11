@@ -1770,7 +1770,7 @@
             "status": 0,
             "tldId": 1
         },
-         {
+        {
             "activated": false,
             "category": "POPULAR",
             "expirationDate": "2026-03-30T00:26:47.000Z",
@@ -1801,21 +1801,21 @@
             "tldId": 1
         },
         {
-            "activated": true,
-            "category": "IN_USE",
-            "expirationDate": "2026-03-06T01:36:25.000Z",
+            "activated": false,
+            "category": "POPULAR",
+            "expirationDate": "2026-01-18 10:47:56",
             "hasAutoRenew": false,
             "hasProtectedRegistration": false,
-            "id": 454311669,
-            "internationalDisplayName": "viavaranasi.com",
+            "id": 10335144,
+            "internationalDisplayName": "hotelamulyamresidency.com",
             "invalidWhois": false,
             "isLocked": true,
             "isPrivate": true,
             "isReadOnly": false,
-            "name": "viavaranasi.com",
+            "name": "hotelamulyamresidency.com",
             "nameservers": [
-                "ns19.domaincontrol.com",
-                "ns20.domaincontrol.com"
+                "ns41.domaincontrol.com",
+                "ns42.domaincontrol.com"
             ],
             "privacyLevel": "FULL",
             "profileId": null,
@@ -1823,10 +1823,100 @@
             "registrarHold": false,
             "registrationType": "NOT_SPECIFIED",
             "renewalPrice": {
-                "listPrice": 1499000000,
+                "listPrice": "NA",
                 "years": 1
             },
-            "sale": 1219,
+            "sale": 25,
+            "status": 0,
+            "tldId": 1
+        },
+        {
+            "activated": false,
+            "category": "POPULAR",
+            "expirationDate": "2026-01-25 11:33:09",
+            "hasAutoRenew": false,
+            "hasProtectedRegistration": false,
+            "id": 1033514434,
+            "internationalDisplayName": "patnimal.com",
+            "invalidWhois": false,
+            "isLocked": true,
+            "isPrivate": true,
+            "isReadOnly": false,
+            "name": "patnimal.com",
+            "nameservers": [
+                "ns41.domaincontrol.com",
+                "ns42.domaincontrol.com"
+            ],
+            "privacyLevel": "FULL",
+            "profileId": null,
+            "protectionPlan": "GOOD",
+            "registrarHold": false,
+            "registrationType": "NOT_SPECIFIED",
+            "renewalPrice": {
+                "listPrice": "NA",
+                "years": 1
+            },
+            "sale": 25,
+            "status": 0,
+            "tldId": 1
+        },
+        {
+            "activated": false,
+            "category": "POPULAR",
+            "expirationDate": "2026-02-15 00:00:00",
+            "hasAutoRenew": false,
+            "hasProtectedRegistration": false,
+            "id": 10335144345,
+            "internationalDisplayName": "hotelprabhat.com",
+            "invalidWhois": false,
+            "isLocked": true,
+            "isPrivate": true,
+            "isReadOnly": false,
+            "name": "hotelprabhat.com",
+            "nameservers": [
+                "ns41.domaincontrol.com",
+                "ns42.domaincontrol.com"
+            ],
+            "privacyLevel": "FULL",
+            "profileId": null,
+            "protectionPlan": "GOOD",
+            "registrarHold": false,
+            "registrationType": "NOT_SPECIFIED",
+            "renewalPrice": {
+                "listPrice": "NA",
+                "years": 1
+            },
+            "sale": 25,
+            "status": 0,
+            "tldId": 1
+        },
+        {
+            "activated": false,
+            "category": "POPULAR",
+            "expirationDate": "2026-02-24 10:21:34",
+            "hasAutoRenew": false,
+            "hasProtectedRegistration": false,
+            "id": 10335144344,
+            "internationalDisplayName": "kasarhimalayaholidayhome.in",
+            "invalidWhois": false,
+            "isLocked": true,
+            "isPrivate": true,
+            "isReadOnly": false,
+            "name": "kasarhimalayaholidayhome.in",
+            "nameservers": [
+                "ns41.domaincontrol.com",
+                "ns42.domaincontrol.com"
+            ],
+            "privacyLevel": "FULL",
+            "profileId": null,
+            "protectionPlan": "GOOD",
+            "registrarHold": false,
+            "registrationType": "NOT_SPECIFIED",
+            "renewalPrice": {
+                "listPrice": "NA",
+                "years": 1
+            },
+            "sale": 25,
             "status": 0,
             "tldId": 1
         }
