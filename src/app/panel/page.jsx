@@ -19,9 +19,9 @@ export default function QuickAccessPage() {
         },
         {
             id: "domains",
-            title: "Ssl  & Domains",
+            title: "Ssl Status",
             description: "Manage and connect your business domains seamlessly.",
-            icon: <Globe size={28} className="text-white" />,
+            icon: <ShieldCheck size={28} className="text-white" />,
             accent: "bg-emerald-600",
             hover: "hover:shadow-emerald-200",
             link: "/domain-lookup",
@@ -34,6 +34,15 @@ export default function QuickAccessPage() {
             accent: "bg-purple-600",
             hover: "hover:shadow-purple-200",
             link: "/chat-bot",
+        },
+        {
+            id: "Domains & Hosting",
+            title: "Domains & Hosting",
+            description: "Manage your domain and hosting needs efficiently.",
+            icon: <Globe size={28} className="text-white" />,
+            accent: "bg-cyan-600",
+            hover: "hover:shadow-cyan-200",
+            link: "/domain-hosting",
         },
     ];
 
@@ -61,7 +70,7 @@ export default function QuickAccessPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {cards.map((card) => (
                         <Card
                             key={card.id}

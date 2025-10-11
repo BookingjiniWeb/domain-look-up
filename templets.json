@@ -1,25 +1,27 @@
 [
-  {"id": 1, "url": "demo-sites.jinisites.in/basic/demo1", "type": "basic"},
-  {"id": 2, "url": "demo-sites.jinisites.in/basic/demo2", "type": "basic"},
-  {"id": 3, "url": "demo-sites.jinisites.in/basic/demo3", "type": "basic"},
-  {"id": 4, "url": "demo-sites.jinisites.in/basic/demo4", "type": "basic"},
-  {"id": 5, "url": "demo-sites.jinisites.in/basic/demo7", "type": "basic"},
-  {"id": 6, "url": "demo-sites.jinisites.in/basic/basic6", "type": "basic"},
-  {"id": 7, "url": "demo-sites.jinisites.in/basic/basic7", "type": "basic"},
-  {"id": 8, "url": "demo-sites.jinisites.in/basic/basic8", "type": "basic"},
-  {"id": 9, "url": "demo-sites.jinisites.in/basic/basic9", "type": "basic"},
-  {"id": 10, "url": "demo-sites.jinisites.in/basic/basic10", "type": "basic"},
+  {"id": 1, "url": "https://demo-sites.jinisites.in/basic/demo1", "type": "basic"},
+  {"id": 2, "url": "https://demo-sites.jinisites.in/basic/demo2", "type": "basic"},
+  {"id": 3, "url": "https://demo-sites.jinisites.in/basic/demo3", "type": "basic"},
+  {"id": 4, "url": "https://demo-sites.jinisites.in/basic/demo4", "type": "basic"},
+  {"id": 5, "url": "https://demo-sites.jinisites.in/basic/demo7", "type": "basic"},
+  {"id": 6, "url": "https://demo-sites.jinisites.in/basic/basic6", "type": "basic"},
+  {"id": 7, "url": "https://shivaniresortmandu.com/", "type": "basic"},
+  {"id": 8, "url": "https://similipalkhairiresort.com/", "type": "basic"},
+  {"id": 9, "url": "https://hotelfortuneinn.in", "type": "basic"},
 
-  {"id": 11, "url": "demo-sites.jinisites.in/premium/demo2", "type": "premium"},
-  {"id": 12, "url": "demo-sites.jinisites.in/premium/demo5", "type": "premium"},
-  {"id": 13, "url": "demo-sites.jinisites.in/premium/demo6", "type": "premium"},
-  {"id": 14, "url": "demo-sites.jinisites.in/premium/demo10", "type": "premium"},
-  {"id": 15, "url": "demo-sites.jinisites.in/premium/", "type": "premium"},
-  {"id": 16, "url": "demo-sites.jinisites.in/premium/", "type": "premium"},
-  {"id": 17, "url": "demo-sites.jinisites.in/premium/", "type": "premium"},
-  {"id": 18, "url": "demo-sites.jinisites.in/premium/", "type": "premium"},
-  {"id": 19, "url": "demo-sites.jinisites.in/premium/", "type": "premium"},
-  {"id": 20, "url": "demo-sites.jinisites.in/premium/0", "type": "premium"}
+
+  {"id": 14, "url": "https://neelamorchid.com/", "type": "premium"},
+  {"id": 11, "url": "https://demo-sites.jinisites.in/premium/demo2", "type": "premium"},
+  {"id": 12, "url": "https://demo-sites.jinisites.in/premium/demo5", "type": "premium"},
+  {"id": 13, "url": "https://demo-sites.jinisites.in/premium/demo6", "type": "premium"},
+  {"id": 21, "url": "https://demo-sites.jinisites.in/premium/demo10", "type": "premium"},
+  {"id": 15, "url": "https://hotelthesaajbbsr.com/", "type": "premium"},
+  {"id": 16, "url": "https://smhives.com/", "type": "premium"},
+  {"id": 17, "url": "https://hotelpahadi.com", "type": "premium"},
+  {"id": 18, "url": "https://hukamholidayhome.com/", "type": "premium"},
+  {"id": 19, "url": "https://prakriti-retreat.com/", "type": "premium"},
+  {"id": 20, "url": "https://jibhivillage.com", "type": "premium"}
+
 ]
 
 
